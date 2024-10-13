@@ -17,7 +17,7 @@ class GestionPrestamos {
 
         //Validar que no tenga un equipo ya registrado
         if (buscarPorCedulaIngenieria(cedula) != null) {
-            System.out.println("Ete estudiante ya tiene un equipo prestado.");
+            System.out.println("Este estudiante ya tiene un equipo prestado.");
             return;
         }
 
@@ -32,7 +32,7 @@ class GestionPrestamos {
         System.out.print("Ingrese el promedio acumulado: ");
         float promedio = sc.nextFloat();
         System.out.print("Ingrese el serial del computador: ");
-        String serialComputador =sc.next();
+        String serialComputador = sc.next();
 
         //crear y almacenar el estudiante y su equipo
         EstudianteIngenieria estudiante = new EstudianteIngenieria(cedula, nombre, apellido, telefono, semestre, promedio, serialComputador);

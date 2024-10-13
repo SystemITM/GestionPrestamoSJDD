@@ -1,5 +1,3 @@
-import java.net.Socket;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -14,8 +12,8 @@ public class Menu {
             do{
                 //Menu principal
                 System.out.println("=== GESTIÓN PRÉSTAMOS UNIVERSIDAD SAN JUAN DE DIOS ===");
-                System.out.println("1. Estudiantes de Ingenieria");
-                System.out.println("2. Estudiantes de Diseño");
+                System.out.println("1. Estudiantes de Ingenieria"); // Computadores
+                System.out.println("2. Estudiantes de Diseño"); // Tabletas
                 System.out.println("3. Imprimir Inventario Total");
                 System.out.println("4. Importar Estudiantes de Ingenieria");
                 System.out.println("5 Exportar estudiantes de Ingenieria");
