@@ -1,4 +1,4 @@
-class Estudiante{
+abstract class Estudiante{
     String cedula;
     String nombre;
     String apellido;
@@ -10,7 +10,10 @@ class Estudiante{
         this.apellido = apellido;
         this.telefono = telefono;
     }
-    // Métodos para implementación en clases hijas
-    public void mostrarDatos();
-    public String getSerial();
+
+   // Métodos abstractos para implementación en clases hijas
+   public abstract void mostrarDatos();
+   public abstract String getSerial();
+    
+   
 }
