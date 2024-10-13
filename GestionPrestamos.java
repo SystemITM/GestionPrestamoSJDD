@@ -5,7 +5,7 @@ class GestionPrestamos {
 
     ArrayList<EstudianteIngenieria> vectorIngenieros = new ArrayList<>();
     ArrayList<EstudianteDiseno> vectorDisenadores = new ArrayList<>(); 
-    ArrayList<ComputadorPortatil> vectorPortatil = new ArrayList()
+    ArrayList<ComputadorPortatil> vectorPortatil = new ArrayList();
     ArrayList<TabletaGrafica> vectorTableta = new ArrayList();
     Scanner sc = new Scanner(System.in);
 

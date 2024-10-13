@@ -7,16 +7,18 @@ public class ExportarArchivosTXT {
     public static void exportarEstudiantesIngenieria(String nameFile, ArrayList<EstudianteIngenieria> estudiantes){
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(nameFile))){
             for(EstudianteIngenieria estudiante : estudiantes){
-                bw.write(estudiante.cedula + "," +
-                         estudiante.nombre + "," + 
-                         estudiante.apellido + "," +
-                         estudiante.telefono + "," +
-                         estudiante.semestre + "," +
-                         estudiante.promedio + "," + 
-                         estudiante.getSerial());
+                bw.write("Cedula: " + estudiante.cedula + "\n" +
+                         "Nombre: " + estudiante.nombre + "\n" + 
+                         "Apellido " + estudiante.apellido + "\n" +
+                         "Telefono " + estudiante.telefono + "\n" +
+                         "Semestre " + estudiante.semestre + "\n" +
+                         "Promedio" + estudiante.promedio + "\n" + 
+                         "Serial " + estudiante.getSerial()+ "\n\n");
+                bw.write("---------------------------------------\n");
                 bw.newLine(); // Agregar una nueva línea para el próximo estudiante
 
             }
+            System.out.println("Archivo exportado correctamente");
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -25,15 +27,17 @@ public class ExportarArchivosTXT {
     public static void exportarEstudiantesDiseno(String nameFile, ArrayList<EstudianteDiseno> estudiantes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nameFile))) {
             for (EstudianteDiseno estudiante : estudiantes) {
-                bw.write(estudiante.cedula + "," +
-                         estudiante.nombre + "," +
-                         estudiante.apellido + "," +
-                         estudiante.telefono + "," +
-                         estudiante.modalidadEstudio + "," +
-                         estudiante.asignaturas + "," +
-                         estudiante.getSerial());
+                bw.write("Cedula: " + estudiante.cedula + "\n" +
+                         "Nombre: " + estudiante.nombre + "\n" +
+                         "Apellido " + estudiante.apellido + "\n" +
+                         "Telefono " + estudiante.telefono + "\n" +
+                         "Modalidad " + estudiante.modalidadEstudio + "\n" +
+                         "Asignaturas" + estudiante.asignaturas + "\n" +
+                         "Serial " + estudiante.getSerial() + "\n\n");
+                bw.write("\n---------------------------------------\n");
                 bw.newLine(); // Agregar una nueva línea para el próximo estudiante
             }
+            System.out.println("Estudiantes de diseño exportados exitosamente.");
         }catch(IOException e){
             e.printStackTrace();
         }

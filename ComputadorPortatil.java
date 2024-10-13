@@ -14,7 +14,8 @@ class ComputadorPortatil {
         this.sistemaOperativo = sistemaOperativo;
         this.procesador = procesador;
     }    
-
+    
+    // Métodos para mostrar detalles
     public void mostrarDetalles() {
         System.out.println("Computador: " + marca + " - " + sistemaOperativo + " - Procesador: " + procesador + " - Precio: " + precio);
     }

@@ -11,11 +11,12 @@ class EstudianteIngenieria extends Estudiante {
         this.serialComputador = serialComputador;
     }
 
+    // Métodos para mostrar detalles
     @Override
     public void mostrarDatos(){
         System.out.println("Estudiante Ingeniería: " + nombre + " " + apellido + " - Semestre: " + semestre + " - Promedio: " + promedio);
     }
-    
+
     @Override
     public String getSerial(){
         return serialComputador;

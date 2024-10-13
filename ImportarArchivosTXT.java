@@ -12,21 +12,21 @@ public class ImportarArchivosTXT {
         try (BufferedReader br = new BufferedReader(new FileReader(nameFile))){
             String linea;
             while ((linea = br.readLine()) != null) {
-                String[] datos = linea.split(","); // Asumimos que los datos están separados por comas
-                if (datos.length == 7) { //aseguramos que hay suficientes datos
-                    String cedula = datos[0];
-                    String nombre = datos[1];
-                    String apellido = datos[2];
-                    String telefono = datos[3];
-                    int semestre = Integer.parseInt(datos[4]);
-                    float promedio = Float.parseFloat(datos[5]);
-                    String serial = datos[6];
+                if (linea.startsWith("Cedula: ")) {
+                    String cedula = linea.split(": ")[1].trim();
+                    String nombre = br.readLine().split(": ")[1].trim();
+                    String apellido = br.readLine().split(": ")[1].trim();
+                    String telefono = br.readLine().split(": ")[1].trim();
+                    int semestre = Integer.parseInt(br.readLine().split(": ")[1].trim());
+                    float promedio = Float.parseFloat(br.readLine().split(": ")[1].trim());
+                    String serial = br.readLine().split(": ")[1].trim();
+
 
                     EstudianteIngenieria estudiante = new EstudianteIngenieria(cedula, nombre, apellido, telefono, semestre, promedio, serial);
                     estudiantes.add(estudiante);
                 }
             }
-            System.out.println("Archivo importado correctamente.");
+            System.out.println("Estudiantes de ingeniería importados correctamente.");
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -41,21 +41,20 @@ public class ImportarArchivosTXT {
         try (BufferedReader br = new BufferedReader(new FileReader(nameFile))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-            String[] datos = linea.split(","); // Asumimos que los datos están separados por comas
-            if (datos.length == 6) {
-                String cedula = datos[0];
-                String nombre = datos[1];
-                String apellido = datos[2];
-                String telefono = datos[3];
-                String modalidad = datos[4];
-                int asignaturas = Integer.parseInt(datos[5]);
-                String serial = datos[6];
-
+                if (linea.startsWith("Cedula: ")) {
+                    String cedula = linea.split(": ")[1].trim();
+                    String nombre = br.readLine().split(": ")[1].trim();
+                    String apellido = br.readLine().split(": ")[1].trim();
+                    String telefono = br.readLine().split(": ")[1].trim();
+                    String modalidad = br.readLine().split(": ")[1].trim();
+                    int asignaturas = Integer.parseInt(br.readLine().split(": ")[1].trim());
+                    int serial = Integer.parseInt(br.readLine().split(": ")[1].trim());
+                    
                 EstudianteDiseno estudiante = new EstudianteDiseno(cedula, nombre, apellido, telefono, modalidad, asignaturas, asignaturas);
                 estudiantes.add(estudiante);
             }
         }
-         System.out.println("Archivo importado correctamente.");
+         System.out.println("Estudiantes de diseño importados correctamente.");
         }catch (IOException e) {
         e.printStackTrace();
         }
