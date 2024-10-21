@@ -6,8 +6,6 @@ Semestre: 4
 Promedio: 3.5
 Serial: ABCD1234
 
----------------------------------------
-
 Cedula: 87654321
 Nombre: Ana
 Apellido: Gomez
@@ -16,8 +14,6 @@ Semestre: 6
 Promedio: 4.0
 Serial: WXYZ5678
 
----------------------------------------
-
 Cedula: 13579246
 Nombre: Carlos
 Apellido: Lopez
@@ -25,6 +21,3 @@ Telefono: 3209876543
 Semestre: 2
 Promedio: 2.8
 Serial: QWERTY135
-
----------------------------------------
-

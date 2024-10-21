@@ -140,7 +140,7 @@ class GestionPrestamos {
         String serialTableta = sc.next();
 
          // Crear y almacenar el estudiante y su equipo
-         EstudianteDiseno estudiante = new EstudianteDiseno(cedula, nombre, apellido, telefono, modalidad, asignaturas, asignaturas);
+         EstudianteDiseno estudiante = new EstudianteDiseno(cedula, nombre, apellido, telefono, modalidad, asignaturas, serialTableta);
          vectorDisenadores.add(estudiante);
          System.out.println("Préstamo registrado exitosamente.");
     }
@@ -241,7 +241,7 @@ class GestionPrestamos {
         for(EstudianteIngenieria estudiante : vectorIngenieros){
             estudiante.mostrarDatos();
         }
-
+        System.out.println("\n");
         System.out.println("Equipos prestados a estudiaantes de Diseño:");
         for(EstudianteDiseno estudiante : vectorDisenadores){
             estudiante.mostrarDatos();
