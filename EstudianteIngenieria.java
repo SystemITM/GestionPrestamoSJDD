@@ -14,7 +14,9 @@ class EstudianteIngenieria extends Estudiante {
     // Métodos para mostrar detalles
     @Override
     public void mostrarDatos(){
-        System.out.println("Estudiante Ingeniería: " + nombre + " " + apellido + " - Semestre: " + semestre + " - Promedio: " + promedio);
+        System.out.println("Estudiante Ingeniería: " + nombre + " " + apellido + 
+        "\n" + " - Semestre: " + semestre + 
+        "\n" + " - Promedio: " + promedio);
     }
 
     @Override

@@ -13,7 +13,9 @@ class EstudianteDiseno extends Estudiante{
     // Métodos para mostrar detalles
     @Override
     public void mostrarDatos(){
-        System.out.println("Estudiante Diseño: " + nombre + " " + apellido + " - Modalidad: " + modalidadEstudio + " - Asignaturas: " + asignaturas);
+        System.out.println("Estudiante Diseño: " + nombre + " " + apellido + "\n" +
+         " - Modalidad: " + modalidadEstudio + "\n" +
+         " - Asignaturas: " + asignaturas);
     }
 
     @Override
