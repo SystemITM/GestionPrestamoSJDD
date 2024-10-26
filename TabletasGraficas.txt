@@ -1,0 +1,15 @@
+Serial: TBL-1
+Marca: Wacom
+Tamaño: 13.3
+Precio: 800.0
+Almacenamiento: 512 GB
+Peso: 1.2
+Estado: 1
+
+Serial: TBL-2
+Marca: Huion
+Tamaño: 10.1
+Precio: 500.0
+Almacenamiento: 256 GB
+Peso: 0.9
+Estado: 1

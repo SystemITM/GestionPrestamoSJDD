@@ -1,23 +1,15 @@
-Cedula: 12345678
+Cedula: 123456
 Nombre: Juan
 Apellido: Perez
-Telefono: 3001234567
+Teléfono: 3001234567
 Semestre: 4
 Promedio: 3.5
-Serial: ABCD1234
+Serial: CPT-1
 
-Cedula: 87654321
+Cedula: 654321
 Nombre: Ana
-Apellido: Gomez
-Telefono: 3107654321
-Semestre: 6
-Promedio: 4.0
-Serial: WXYZ5678
-
-Cedula: 13579246
-Nombre: Carlos
 Apellido: Lopez
-Telefono: 3209876543
-Semestre: 2
-Promedio: 2.8
-Serial: QWERTY135
+Teléfono: 3007654321
+Semestre: 5
+Promedio: 4.2
+Serial: CPT-2

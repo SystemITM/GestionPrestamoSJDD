@@ -7,8 +7,7 @@ class ComputadorPortatil {
     float precio;
     String sistemaOperativo;
     String procesador;
-    int estado = 0;
-
+    int estado;
     public ComputadorPortatil(String serial, String marca, float tamano, float precio, String sistemaOperativo,String procesador, int estado) {
         this.serial = serial;
         this.marca = marca;
@@ -66,5 +65,35 @@ class ComputadorPortatil {
     }
     public void setEstado(int estado) {
         this.estado = estado;
+    }
+    public String getMarca() {
+        return marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    public float getTamano() {
+        return tamano;
+    }
+    public void setTamano(float tamano) {
+        this.tamano = tamano;
+    }
+    public float getPrecio() {
+        return precio;
+    }
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+    public String getSistemaOperativo() {
+        return sistemaOperativo;
+    }
+    public void setSistemaOperativo(String sistemaOperativo) {
+        this.sistemaOperativo = sistemaOperativo;
+    }
+    public String getProcesador() {
+        return procesador;
+    }
+    public void setProcesador(String procesador) {
+        this.procesador = procesador;
     }
 }

@@ -4,46 +4,108 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ExportarArchivosTXT {
-    
-    // Método para exportar estudiantes de ingeniería a un archivo de texto
-    public static void exportarEstudiantesIngenieria(String nameFile, ArrayList<EstudianteIngenieria> estudiantes) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nameFile))) {
+
+    // Método para exportar estudiantes de ingeniería
+    public static void exportarEstudiantesIngenieria(String filePath, ArrayList<EstudianteIngenieria> estudiantes) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (EstudianteIngenieria estudiante : estudiantes) {
-                bw.write("Cedula: " + estudiante.cedula + "\n" +
-                         "Nombre: " + estudiante.nombre + "\n" + 
-                         "Apellido: " + estudiante.apellido + "\n" + // Agregado ":" para consistencia
-                         "Telefono: " + estudiante.telefono + "\n" + // Agregado ":" para consistencia
-                         "Semestre: " + estudiante.semestre + "\n" + // Agregado ":" para consistencia
-                         "Promedio: " + estudiante.promedio + "\n" + // Agregado ":" para consistencia
-                         "Serial: " + estudiante.getSerial() + "\n\n"); // Agregado ":" para consistencia
-                
-                bw.write("---------------------------------------\n");
-                bw.newLine(); // Agregar una nueva línea para el próximo estudiante
+                writer.write("Cedula: " + estudiante.getCedula());
+                writer.newLine();
+                writer.write("Nombre: " + estudiante.getNombre());
+                writer.newLine();
+                writer.write("Apellido: " + estudiante.getApellido());
+                writer.newLine();
+                writer.write("Teléfono: " + estudiante.getTelefono());
+                writer.newLine();
+                writer.write("Semestre: " + estudiante.getSemestre());
+                writer.newLine();
+                writer.write("Promedio: " + estudiante.getPromedio());
+                writer.newLine();
+                writer.write("Serial: " + estudiante.getSerial());
+                writer.newLine();
+                writer.newLine();  // Espacio entre estudiantes
             }
-            System.out.println("Archivo exportado correctamente.");
+            System.out.println("Archivo de estudiantes de ingeniería exportado con éxito en " + filePath);
         } catch (IOException e) {
-            e.printStackTrace(); // Imprimir error en caso de fallo en la escritura
+            System.out.println("Error al exportar estudiantes de ingeniería: " + e.getMessage());
         }
     }
 
-    // Método para exportar estudiantes de diseño a un archivo de texto
-    public static void exportarEstudiantesDiseno(String nameFile, ArrayList<EstudianteDiseno> estudiantes) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nameFile))) {
+    // Método para exportar estudiantes de diseño
+    public static void exportarEstudiantesDiseno(String filePath, ArrayList<EstudianteDiseno> estudiantes) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (EstudianteDiseno estudiante : estudiantes) {
-                bw.write("Cedula: " + estudiante.cedula + "\n" +
-                         "Nombre: " + estudiante.nombre + "\n" +
-                         "Apellido: " + estudiante.apellido + "\n" + // Agregado ":" para consistencia
-                         "Telefono: " + estudiante.telefono + "\n" + // Agregado ":" para consistencia
-                         "Modalidad: " + estudiante.modalidadEstudio + "\n" + // Agregado ":" para consistencia
-                         "Asignaturas: " + estudiante.asignaturas + "\n" + // Agregado ":" para consistencia
-                         "Serial: " + estudiante.getSerial() + "\n\n"); // Agregado ":" para consistencia
-                
-                bw.write("---------------------------------------\n");
-                bw.newLine(); // Agregar una nueva línea para el próximo estudiante
+                writer.write("Cedula: " + estudiante.getCedula());
+                writer.newLine();
+                writer.write("Nombre: " + estudiante.getNombre());
+                writer.newLine();
+                writer.write("Apellido: " + estudiante.getApellido());
+                writer.newLine();
+                writer.write("Teléfono: " + estudiante.getTelefono());
+                writer.newLine();
+                writer.write("Modalidad: " + estudiante.getModalidad());
+                writer.newLine();
+                writer.write("Cantidad de Asignaturas: " + estudiante.getCantidadAsignaturas());
+                writer.newLine();
+                writer.write("Serial: " + estudiante.getSerial());
+                writer.newLine();
+                writer.newLine();  // Espacio entre estudiantes
             }
-            System.out.println("Estudiantes de diseño exportados exitosamente.");
+            System.out.println("Archivo de estudiantes de diseño exportado con éxito en " + filePath);
         } catch (IOException e) {
-            e.printStackTrace(); // Imprimir error en caso de fallo en la escritura
+            System.out.println("Error al exportar estudiantes de diseño: " + e.getMessage());
+        }
+    }
+
+    // Método para exportar computadores portátiles
+    public static void exportarComputadoresPortatiles(String filePath, ArrayList<ComputadorPortatil> portatiles) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (ComputadorPortatil portatil : portatiles) {
+                writer.write("Serial: " + portatil.getSerial());
+                writer.newLine();
+                writer.write("Marca: " + portatil.getMarca());
+                writer.newLine();
+                writer.write("Tamaño: " + portatil.getTamano());
+                writer.newLine();
+                writer.write("Precio: " + portatil.getPrecio());
+                writer.newLine();
+                writer.write("Sistema operativo: " + portatil.getSistemaOperativo());
+                writer.newLine();
+                writer.write("Procesador: " + portatil.getProcesador());
+                writer.newLine();
+                writer.write("Estado: " + portatil.getEstado());
+                writer.newLine();
+                writer.newLine();  // Espacio entre computadores portátiles
+            }
+            System.out.println("Archivo de computadores portátiles exportado con éxito en " + filePath);
+        } catch (IOException e) {
+            System.out.println("Error al exportar computadores portátiles: " + e.getMessage());
+        }
+    }
+
+    // Método para exportar tabletas gráficas
+    public static void exportarTabletasGraficas(String filePath, ArrayList<TabletaGrafica> tabletas) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (TabletaGrafica tableta : tabletas) {
+                writer.write("Serial: " + tableta.getSerial());
+                writer.newLine();
+                writer.write("Marca: " + tableta.getMarca());
+                writer.newLine();
+                writer.write("Tamaño: " + tableta.getTamano());
+                writer.newLine();
+                writer.write("Precio: " + tableta.getPrecio());
+                writer.newLine();
+                writer.write("Almacenamiento: " + tableta.getAlmacenamiento());
+                writer.newLine();
+                writer.write("Peso: " + tableta.getPeso());
+                writer.newLine();
+                writer.write("Estado: " + tableta.getEstado());
+                writer.newLine();
+                writer.newLine();  // Espacio entre tabletas gráficas
+            }
+            System.out.println("Archivo de tabletas gráficas exportado con éxito en " + filePath);
+        } catch (IOException e) {
+            System.out.println("Error al exportar tabletas gráficas: " + e.getMessage());
         }
     }
 }

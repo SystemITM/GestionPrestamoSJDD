@@ -15,9 +15,9 @@ public class Menu {
                 System.out.println("1. Estudiantes de Ingenieria"); // Computadores
                 System.out.println("2. Estudiantes de Diseño"); // Tabletas
                 System.out.println("3. Imprimir Inventario Total");
-                System.out.println("4. Importar Estudiantes de Ingenieria");
+                System.out.println("4. Importar Estudiantes de Ingenieria Y Computadores Portatiles");
                 System.out.println("5 Exportar estudiantes de Ingenieria");
-                System.out.println("6. Importar estudiantes de Diseño");
+                System.out.println("6. Importar estudiantes de Diseño Y Tabletas Graficas");
                 System.out.println("7. Exportar estudiantes de Diseño");
                 System.out.println("8. Salir");
                 System.out.println("Selecione una opcion: ");
@@ -36,12 +36,14 @@ public class Menu {
                         break;
                     case 4:
                         gestionArchivo.importarEstudiantesIngenieria(gestionPrestamos.vectorIngenieros);
+                        gestionArchivo.importarComputadoresPortatiles(gestionPrestamos.vectorPortatil);
                         break;
                     case 5:
                         gestionArchivo.exportarEstudiantesIngenieria(gestionPrestamos.vectorIngenieros);
                         break;
                     case 6:
                         gestionArchivo.importarEstudiantesDiseno(gestionPrestamos.vectorDisenadores);
+                        gestionArchivo.importarTabletasGraficas(gestionPrestamos.vectorTableta);
                         break;
                     case 7:
                         gestionArchivo.exportarEstudiantesDiseno(gestionPrestamos.vectorDisenadores);
