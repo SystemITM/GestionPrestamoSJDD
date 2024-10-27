@@ -1,0 +1,16 @@
+Serial: CPT-1
+Marca: Dell
+Tamaño: 15.6
+Precio: 1200.0
+Sistema operativo: Windows 10
+Procesador: Intel Core i5
+Estado: 1
+
+Serial: CPT-2
+Marca: HP
+Tamaño: 14.0
+Precio: 1000.0
+Sistema operativo: Windows 11
+Procesador: AMD Ryzen
+Estado: 1
+

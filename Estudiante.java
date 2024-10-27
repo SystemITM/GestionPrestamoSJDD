@@ -4,6 +4,8 @@ abstract class Estudiante{
     String apellido;
     String telefono;
 
+    //setter y getters
+    
     public String getCedula() {
         return cedula;
     }

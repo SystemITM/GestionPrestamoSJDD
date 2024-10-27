@@ -43,9 +43,9 @@ public class ExportarArchivosTXT {
                 writer.newLine();
                 writer.write("Teléfono: " + estudiante.getTelefono());
                 writer.newLine();
-                writer.write("Modalidad: " + estudiante.getModalidad());
+                writer.write("Modalidad: " + estudiante.getModalidadEstudio());
                 writer.newLine();
-                writer.write("Cantidad de Asignaturas: " + estudiante.getCantidadAsignaturas());
+                writer.write("Cantidad de Asignaturas: " + estudiante.getAsignaturas());
                 writer.newLine();
                 writer.write("Serial: " + estudiante.getSerial());
                 writer.newLine();

@@ -11,15 +11,17 @@ public class Menu {
 
             do{
                 //Menu principal
-                System.out.println("=== GESTIÓN PRÉSTAMOS UNIVERSIDAD SAN JUAN DE DIOS ===");
-                System.out.println("1. Estudiantes de Ingenieria"); // Computadores
-                System.out.println("2. Estudiantes de Diseño"); // Tabletas
-                System.out.println("3. Imprimir Inventario Total");
-                System.out.println("4. Importar Estudiantes de Ingenieria Y Computadores Portatiles");
-                System.out.println("5 Exportar estudiantes de Ingenieria");
-                System.out.println("6. Importar estudiantes de Diseño Y Tabletas Graficas");
-                System.out.println("7. Exportar estudiantes de Diseño");
-                System.out.println("8. Salir");
+                System.out.println("=== 📚📚📚 GESTIÓN PRÉSTAMOS UNIVERSIDAD SAN JUAN DE DIOS 📚📚📚===");
+                System.out.println("1. 👨‍💻👩‍💻 Estudiantes de Ingenieria 👨‍💻👩‍💻"); // Computadores
+                System.out.println("2. 👩‍🎨👨‍🎨 Estudiantes de Diseño👩‍🎨👨‍🎨"); // Tabletas
+                System.out.println("3. 💻📱Imprimir Inventario Total💻📱");
+                System.out.println("4. 💻👨‍💻 Importar Estudiantes de Ingenieria Y Computadores Portatiles💻👨‍💻");
+                System.out.println("5. 👨‍💻🟦 Exportar estudiantes de Ingenieria👨‍💻🟦");
+                System.out.println("6. 📱👩‍🎨Importar estudiantes de Diseño Y Tabletas Graficas📱👩‍🎨");
+                System.out.println("7. 👨‍🎨🟪Exportar estudiantes de Diseño👨‍🎨🟪");
+                System.out.println("8. 💻💻 Exportar Computadores Portatiles 💻💻");
+                System.out.println("9. 📱📱Exportar tabletas graficas📱📱");
+                System.out.println("10. 👋👋 Salir 👋👋 ");
                 System.out.println("Selecione una opcion: ");
                 opcion = sc.nextInt();
                 sc.nextLine();// Consumir la nueva línea 
@@ -49,13 +51,19 @@ public class Menu {
                         gestionArchivo.exportarEstudiantesDiseno(gestionPrestamos.vectorDisenadores);
                         break;
                     case 8:
+                        gestionArchivo.exportarComputadoresPortatiles(gestionPrestamos.vectorPortatil);
+                        break;
+                    case 9:
+                        gestionArchivo.exportarTabletasGraficas(gestionPrestamos.vectorTableta);
+                        break;
+                    case 10:
                         System.out.println("Saliendo del programa...");
                         break;
                     default:
                         System.out.println("Opcion no valida, intente nuevamente.");
                         break;
                 }
-            }while(opcion != 8);
+            }while(opcion != 10);
         }
 
         //Submenú para estudiantes de ingeniería

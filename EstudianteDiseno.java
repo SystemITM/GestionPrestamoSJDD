@@ -4,7 +4,7 @@ class EstudianteDiseno extends Estudiante{
     String serialTableta;
 
   
-
+    //constructor 
     public EstudianteDiseno(String cedula, String nombre, String apellido, String telefono, String modalidadEstudio,int asignaturas, String serialTableta) {
         super(cedula, nombre, apellido, telefono);
         this.modalidadEstudio = modalidadEstudio;
@@ -24,24 +24,20 @@ class EstudianteDiseno extends Estudiante{
     public String getSerial(){
         return serialTableta;
     }
-
     public String getModalidadEstudio() {
         return modalidadEstudio;
     }
-
     public void setModalidadEstudio(String modalidadEstudio) {
         this.modalidadEstudio = modalidadEstudio;
     }
-
     public int getAsignaturas() {
         return asignaturas;
     }
-
     public void setAsignaturas(int asignaturas) {
         this.asignaturas = asignaturas;
     }
-
     public void setSerialTableta(String serialTableta) {
         this.serialTableta = serialTableta;
     }
+
 }

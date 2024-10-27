@@ -121,6 +121,7 @@ class GestionPrestamos {
         }
 
         System.out.println("Modificacion realizada con exito.");
+        System.out.println("\n");
 
     }
 
@@ -138,6 +139,7 @@ class GestionPrestamos {
             estudiante.mostrarDatos();
             System.out.println("\n Computador prestado: ");
             portatil.mostrarDetalles();
+            System.out.println("\n");
         }
     }
 
@@ -159,7 +161,8 @@ class GestionPrestamos {
 
             vectorIngenieros.remove(estudiante);
             
-            System.out.println("Préstamo de equipo devuelto y el estado del equipo ha sido actualizado Registro del estudiante eliminado.");
+            System.out.println("Préstamo de equipo devuelto y el estado del equipo ha sido actualizado. \n Registro del estudiante eliminado.");
+            System.out.println("\n");
             }
         }
         
@@ -218,6 +221,7 @@ class GestionPrestamos {
         
         System.out.println("=== Arma tu Tableta Grafica === ");
         String serialTableta = "TBL-" + (vectorTableta.size() + 1); // Generar serial automático
+        System.out.println("Ingrese la marca de la tableta: ");
         String marca = sc.next();
         System.out.print("Ingrese el tamaño de la tableta (en pulgadas): ");
         float tamano = sc.nextFloat();
@@ -300,6 +304,7 @@ class GestionPrestamos {
             }   
 
         System.out.println("Modificación realizada con éxito.");
+        System.out.println("\n");
         }
     }
 
@@ -318,11 +323,12 @@ class GestionPrestamos {
             tabletaADevolver.setEstado(0);//cambiar el estado de la tableta a 0 (disponible)
 
             vectorDisenadores.remove(estudiante);
-            System.out.println("Prestamo de tableta devuelto y estatdo de la tableta ha sido actualizado, Registro del estudiante eliminado.");
+            System.out.println("Prestamo de tableta devuelto y estatdo de la tableta ha sido actualizado. \n Registro del estudiante eliminado.");
+            System.out.println("\n");
         }
     }
 
-    // Método para buscar equipo (Diseño)
+    // Método para buscar (Diseño)
     public void buscarEquipoDiseno() {
         System.out.println("=== Buscar Equipo (Diseño) ===");
         System.out.print("Ingrese la cédula o el serial del equipo: ");
@@ -336,6 +342,7 @@ class GestionPrestamos {
             estudiante.mostrarDatos();
             System.out.println("\n Tableta Grafica Prestada: ");
             tableta.mostrarDetalles();
+            System.out.println("\n");
         }
     }
 
@@ -392,15 +399,13 @@ class GestionPrestamos {
     public void imprimirInventario(){
         System.out.println("=== Inventario Total ===");
         System.out.println("Equipos prestados a estudiantes de Ingenieria:");
+        System.out.println("\n");
         for(EstudianteIngenieria estudiante : vectorIngenieros){
             estudiante.mostrarDatos();
         }
         System.out.println("\n");
-        System.out.println("Equipos prestados a estudiaantes de Diseño:");
-        for(EstudianteDiseno estudiante : vectorDisenadores){
-            estudiante.mostrarDatos();
-        }
         System.out.println("Computadores Portatiles: ");
+        System.out.println("\n");
         for(ComputadorPortatil portatil : vectorPortatil){
             if (portatil.estado == 1) {
                 System.out.println("Portatiles prestados: ");
@@ -410,7 +415,30 @@ class GestionPrestamos {
                 System.out.println("Portatiles disponibles: ");
                 portatil.mostrarDetalles();
             }
-            
         }
+        System.out.println("\n");
+
+        System.out.println("Equipos prestados a estudiantes de Diseño:");
+        System.out.println("\n");
+        for(EstudianteDiseno estudiante : vectorDisenadores){
+                estudiante.mostrarDatos();
+        }
+        System.out.println("\n");
+        System.out.println("Tabletas Graficas: ");
+        System.out.println("\n");
+        for (TabletaGrafica tableta : vectorTableta) {
+            if (tableta.estado == 1) {
+                System.out.println("Tabletas prestadas: ");
+                tableta.mostrarDetalles();
+            }
+            else{
+                System.out.println("Tabletas disponibles: ");
+                tableta.mostrarDetalles();
+            }
+        }
+        System.out.println("\n");
+        
+        
+    
     }
 }

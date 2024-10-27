@@ -64,7 +64,7 @@ public class ImportarArchivosTXT {
                 EstudianteIngenieria estudiante = new EstudianteIngenieria(cedula, nombre, apellido, telefono, semestre, promedio, serial);
                 estudiantesIngenieria.add(estudiante);
             }
-            System.out.println("Estudiantes de Ingeniería importados correctamente.");
+            System.out.println(" ");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo de estudiantes de Ingeniería: " + e.getMessage());
         }
@@ -128,7 +128,7 @@ public class ImportarArchivosTXT {
                 EstudianteDiseno estudiante = new EstudianteDiseno(cedula, nombre, apellido, telefono, modalidad, cantidadAsignaturas, serial);
                 estudiantesDiseno.add(estudiante);
             }
-            System.out.println("Estudiantes de Diseño importados correctamente.");
+            System.out.println(" ");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo de estudiantes de Diseño: " + e.getMessage());
         }
@@ -190,7 +190,7 @@ public class ImportarArchivosTXT {
                 ComputadorPortatil portatil = new ComputadorPortatil(serial, marca, tamano, precio, sistemaOperativo, procesador, estado);
                 computadoresPortatiles.add(portatil);
             }
-            System.out.println("Computadores Portátiles importados correctamente.");
+            System.out.println(" ");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo de Computadores Portátiles: " + e.getMessage());
         }
@@ -253,7 +253,7 @@ public class ImportarArchivosTXT {
                 TabletaGrafica tableta = new TabletaGrafica(serial, marca, tamano, precio, almacenamiento, peso, estado);
                 tabletasGraficas.add(tableta);
             }
-            System.out.println("Tabletas Gráficas importadas correctamente.");
+            System.out.println(" ");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo de Tabletas Gráficas: " + e.getMessage());
         }

@@ -4,7 +4,7 @@ class EstudianteIngenieria extends Estudiante {
     float promedio;
     String serialComputador;
 
-
+    //constructor 
     public EstudianteIngenieria(String cedula, String nombre, String apellido, String telefono, int semestre,float promedio, String serialComputador) {
         super(cedula, nombre, apellido, telefono);
         this.semestre = semestre;
@@ -24,23 +24,20 @@ class EstudianteIngenieria extends Estudiante {
     public String getSerial(){
         return serialComputador;
     }
-
     public int getSemestre() {
         return semestre;
     }
-
     public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
-
     public float getPromedio() {
         return promedio;
     }
-
     public void setPromedio(float promedio) {
         this.promedio = promedio;
     }
     public void setSerialComputador(String serialComputador) {
         this.serialComputador = serialComputador;
     }
+    
 }

@@ -1,30 +1,16 @@
-Cedula: 22334455
-Nombre: Laura
-Apellido: Martínez
-Telefono: 3009876543
+Cedula: 789012
+Nombre: Carla
+Apellido: Mejia
+Teléfono: 3012345678
 Modalidad: Presencial
-Asignaturas: 5
-Serial: TABC4567
+Cantidad de Asignaturas: 6
+Serial: TBL-1
 
----------------------------------------
-
-Cedula: 55667788
-Nombre: Pedro
-Apellido: Fernández
-Telefono: 3101234567
+Cedula: 345678
+Nombre: Luis
+Apellido: Gomez
+Teléfono: 3023456789
 Modalidad: Virtual
-Asignaturas: 6
-Serial: GHIJ8901
-
----------------------------------------
-
-Cedula: 99887766
-Nombre: Sofía
-Apellido: Ramírez
-Telefono: 3202345678
-Modalidad: Presencial
-Asignaturas: 4
-Serial: ZXYW4321
-
----------------------------------------
+Cantidad de Asignaturas: 4
+Serial: TBL-2
 
